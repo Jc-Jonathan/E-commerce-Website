@@ -1,0 +1,176 @@
+/* Container to center the page */
+.add-container {
+  max-width: 900px; /* ✅ more room */
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styling */
+.add-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+/* Section titles */
+.add-form h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #555;
+}
+
+/* Input and textarea styling */
+.add-form input,
+.add-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.add-form textarea {
+  height: 100px;
+  resize: none;
+}
+
+/* Submit button styling */
+.add-form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+}
+
+.add-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Separate forms with spacing */
+.add-form {
+  margin-bottom: 30px;
+}
+
+/* --- Categories Grid --- */
+.banner-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.banner-item {
+  width: 200px;       /* ✅ fixed width */
+  min-height: 250px;  /* ✅ fixed height for card */
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  text-align: center;
+  flex-shrink: 0; /* ✅ prevents shrinking */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.banner-image {
+  width: 100%;
+  height: 120px;      /* ✅ fixed image height */
+  object-fit: cover;  /* ✅ crop nicely */
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+.banner-item p {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 8px 0;
+  color: #333;
+}
+
+.banner-item button {
+  margin-top: 5px;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-item button:first-of-type {
+  background-color: #ffc107;
+  color: #222;
+}
+
+.banner-item button:first-of-type:hover {
+  background-color: #e0a800;
+}
+
+.banner-item button:last-of-type {
+  background-color: #dc3545;
+  color: white;
+}
+
+.banner-item button:last-of-type:hover {
+  background-color: #b02a37;
+}
+
+/* --- Notifications List --- */
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-item {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 6px;
+  word-wrap: break-word;     /* ✅ break long words */
+  overflow-wrap: break-word; /* ✅ ensures wrapping */
+  white-space: pre-wrap;     /* ✅ keeps formatting, allows wrapping */
+}
+
+.notification-item h4 {
+  margin: 0 0 8px;
+  color: #333;
+}
+
+.text1 {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 10px;
+  line-height: 1.5;        /* ✅ better readability */
+  word-break: break-word;  /* ✅ breaks very long words */
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  .add-container {
+    padding: 20px;
+    margin: 30px 10px;
+  }
+
+  .banner-item {
+    width: 100%; /* ✅ full width on small screens */
+  }
+
+  .add-form button {
+    font-size: 16px;
+  }
+}

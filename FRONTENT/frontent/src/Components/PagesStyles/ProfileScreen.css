@@ -1,0 +1,132 @@
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.profile-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  width: 420px;
+  text-align: center;
+}
+
+.avatar-section {
+  position: relative;
+  display: inline-block;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #4cafef;
+}
+
+.pencil-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #4cafef;
+  color: #fff;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.pencil-icon:hover {
+  background: #3a9ed9;
+}
+
+.user-details h2 {
+  margin: 15px 0;
+  font-size: 22px;
+  color: #333;
+}
+.user-details p {
+  margin: 5px 0;
+  font-size: 15px;
+  color: #555;
+}
+.user-details strong {
+  color: #222;
+}
+
+.edit-btn {
+  margin-top: 15px;
+  background: #4cafef;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.edit-btn:hover {
+  background: #3a9ed9;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.edit-form input,
+.edit-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.save-btn {
+  background: #4caf50;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.save-btn:hover {
+  background: #45a049;
+}
+
+.cancel-btn {
+  background: #f44336;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.cancel-btn:hover {
+  background: #da190b;
+}
+.edit-form input,
+.edit-form select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  background: transparent;   /* transparent background */
+  color: #000;               /* black text */
+}
+
+.edit-form input::placeholder {
+  color: #555;  /* darker placeholder for visibility */
+}
+.edittxt{
+  color: black;
+}

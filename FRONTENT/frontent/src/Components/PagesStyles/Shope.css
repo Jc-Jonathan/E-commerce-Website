@@ -1,0 +1,38 @@
+.main-container {
+  width: 100%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Each section should expand vertically and separate from the next */
+.newcollection,
+.offer,
+.popularaitems,
+.hero-edit {
+  width: 100%;
+  box-sizing: border-box;
+  display: block;
+  position: relative;
+  margin-bottom: 2rem; /* ✅ spacing so they don’t override each other */
+}
+
+.popularaitems {
+  flex-grow: 1; /* ✅ allow to expand with more products */
+  overflow: auto;
+}
+
+.newcollection {
+  flex-grow: 1;
+}
+
+.offer {
+  flex-grow: 1;
+}
+
+.hero-edit {
+  flex-grow: 1;
+}

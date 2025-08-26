@@ -1,0 +1,109 @@
+.text{
+    font-weight: bolder;
+    font-size: larger;
+    margin-right: 14%;
+}
+.navbar {
+  display: flex;
+  padding: 5px;
+  flex-direction: column;
+  gap: 10%;
+  height: 100%;
+  width: 100%;
+  padding-top: 20%;
+  align-items: center;
+}
+.dash{
+    border-radius: 10px;
+    align-items: center;
+    height: 5%;
+    width: 25%;
+    position: relative;
+    right: 8%;
+}
+.buttonpro{
+    width: 120%;
+    height: 125%;
+    position: relative; 
+     right: 30%;
+}
+.buttonorder{
+   width: 133%;
+    height: 125%; 
+    position: relative;
+    right: 36%; 
+}
+.users{
+    border-radius: 10px;
+    height: 5%;
+    position: relative;
+    width: 19%;
+    right: 4.5%;
+}
+.users:hover{
+    color: aliceblue;
+}
+.nav-button1{
+ background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  padding-left: 14%;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+.nav-button {
+background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background-color: green;
+  color: white;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content-products {
+  z-index: 15;
+  position: absolute;
+  top: 77px;
+  right: 6px;
+  border-radius: 4px;
+  background-color: #2c3e50;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.dropdown-content-orders{
+  z-index: 15;
+  position: absolute;
+  top: 70px;
+  right: -15px;
+  border-radius: 4px;
+  background-color: #2c3e50;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+.dropdown-button {
+ z-index: 10;
+  padding: 10px 20px;
+  color: white;
+  text-decoration: none;
+  background-color: green;
+  border-radius: 5px;
+}
+
+.dropdown-button:hover {
+  background-color: green;
+  color: aliceblue;
+}

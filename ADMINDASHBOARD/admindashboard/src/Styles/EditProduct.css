@@ -1,0 +1,66 @@
+.edit-products-container {
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 3px solid green;
+  padding: 10px;
+  color: black;
+  text-align: center;
+}
+
+.product-image {
+  width: 80px;
+  height: auto;
+}
+
+.editbutton {
+  margin: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+}
+
+.deletebutton{
+  margin: 5px;
+  padding: 6px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+}
+.edit-form {
+  margin-top: 30px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.edit-form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+h2{
+    color: black;
+}
+h3{
+  color: black;
+}
+.edit{
+  background-color: #d6c8c8;
+  color: black;
+  border: none;
+  width: 50%;
+}

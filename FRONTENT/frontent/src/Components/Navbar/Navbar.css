@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  height: 70px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+  position: fixed; /* professional look */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* Logo */
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo .logo {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.nav-logo .para1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+/* Nav Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu li {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.nav-menu li .editli {
+ 
+  font-size: 1rem;
+  font-weight: 500;
+  color: #444;
+  transition: all 0.3s ease;
+  padding: 5px;
+}
+
+.nav-menu li .editli:hover {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.nav-menu li hr {
+  width: 100%;
+  border: 1.5px solid #007bff;
+  margin-top: 5px;
+  border-radius: 10px;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Buttons Section */
+.nav-login-cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-login-cart button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.nav-login-cart button:hover {
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.nav-login-cart .notification,
+.nav-login-cart .cart {
+  position: relative;
+}
+
+.notification-badge,
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: red;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+/* Icons */
+.iconnot {
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #e5e5e5;
+    padding: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  }
+
+  .nav-menu.active {
+    display: flex;
+    animation: fadeIn 0.3s ease;
+  }
+
+  .nav-menu li {
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-login-cart {
+    gap: 0.5rem;
+  }
+
+  .nav-login-cart button {
+    font-size: 0.85rem;
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .para1 {
+    display: none;
+  }
+
+  .nav-login-cart button {
+    padding: 5px 8px;
+    font-size: 0.8rem;
+  }
+
+  .nav-logo .logo {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+/* Smooth animation for mobile menu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.nav-login-cart a {
+  text-decoration: none !important;  /* 🚀 Removes underline/red line */
+  color: inherit;                    /* Keep button text color */
+}
+
+.nav-login-cart a:focus,
+.nav-login-cart a:active,
+.nav-login-cart a:hover {
+  text-decoration: none !important;  /* 🚀 Ensure no underline on hover/active */
+  color: inherit;
+}
+
+/* Optional: remove underline from nav menu links as well */
+.nav-menu a {
+  text-decoration: none !important;
+  color: inherit;
+}

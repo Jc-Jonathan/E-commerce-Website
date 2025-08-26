@@ -1,0 +1,29 @@
+.breadcrums {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+  margin: 1.5rem 0;
+  padding: 0.6rem 1rem;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Arrow styling */
+.breadcrums svg {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Make links (HOME, SHOP, etc.) look clickable */
+.breadcrums span {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.breadcrums span:hover {
+  color: #ff4d4d;
+}

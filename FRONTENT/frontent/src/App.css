@@ -1,0 +1,24 @@
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+.app{
+width: 100%;
+height: 50vh;
+}
+#root, .screens{
+align-items: center;
+width: 100%;
+position: absolute;
+}
+
+.footer{
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 90%) ;
+  color: black;
+}

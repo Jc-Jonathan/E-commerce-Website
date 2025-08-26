@@ -1,0 +1,122 @@
+.offers {
+  position: relative;
+  width: 100%;
+  align-items: center;
+  padding: 5% 8%;
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 90%);
+  display: flex;
+  justify-content: center;
+}
+
+.offers, 
+.second-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10%;
+  margin: 5% auto;
+  max-width: 1200px; /* ✅ keeps layout clean on large screens */
+  width: 100%;
+}
+
+.offers-left {
+  flex: 1;
+  line-height: 1.2;
+}
+
+.offers-left h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.offers-left p {
+  font-size: 1rem;
+  color: #555;
+  margin: 15px 0;
+}
+
+.btn1 {
+  background-color: transparent;
+  color: black;
+  border: 2px solid black;
+  padding: 10px 25px;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn1:hover {
+  background-color: red;
+  color: white;
+  border-color: red;
+  transform: translateY(-2px);
+}
+
+.offers-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.editimg1 {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  cursor: pointer;
+  border-radius: 40px;
+}
+
+.editimg1:hover {
+  transform: scale(1.08);
+  opacity: 0.85;
+}
+
+/* ✅ Responsive */
+@media (max-width: 992px) {
+  .offers, 
+  .second-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .offers-left h1 {
+    font-size: 2rem;
+  }
+
+  .offers-left p {
+    font-size: 0.95rem;
+  }
+
+  .editimg1 {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 576px) {
+  .offers {
+    padding: 10% 5%;
+  }
+
+  .offers-left h1 {
+    font-size: 1.6rem;
+  }
+
+  .offers-left p {
+    font-size: 0.9rem;
+  }
+
+  .btn1 {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  .editimg1 {
+    max-width: 100%;
+    border-radius: 20px;
+  }
+}
