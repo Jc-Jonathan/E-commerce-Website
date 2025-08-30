@@ -1,4 +1,3 @@
-import React from 'react'
 import Item from '../Item/Item'
 import "../NewCollection/NewCollection.css"
 

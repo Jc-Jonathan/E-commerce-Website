@@ -14,11 +14,11 @@ import Offers from './Components/Offers/Offers';
 import PopularWrapper from './Components/PopularWraper/PopularWraper';
 import CollectionWrapper from './Components/NewcollectionWrapper/Collectionwraper';
 import ForgetPassword from './Pages/ForgetPassword';
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { db } from "./FirebaseConfig";
 import ProfileScreen from './Pages/ProfileScreen';
 import { collection, getDocs } from "firebase/firestore";
-
+import SearchScreen from './Pages/SearchScreen';
 function App() {
   const [categories, setCategories] = useState<any[]>([]);
 
@@ -53,6 +53,17 @@ function App() {
         <Navbar/>
       </div>
       <Routes>
+         <Route 
+             path="/" 
+             element={
+              <Shop 
+                  PopularComponent={PopularWrapper} 
+                  CollectionComponent={CollectionWrapper} 
+                  HeroComponent={Hero} 
+                  OffersComponent={Offers} 
+             />
+               } 
+          />
         <Route 
           path="/Shop" 
           element={
@@ -82,12 +93,13 @@ function App() {
         <Route path='/forgetpassword' element={<ForgetPassword/>}/>
         <Route path='/ProfileScreen' element={<ProfileScreen/>}/>
         <Route path='/SignUpScreen' element={<SignUpScreen/>}/>
+        <Route path='/SearchScreen' element={<SearchScreen/>}/>
         <Route path='/Product' element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>
         </Route> 
       </Routes>
       <div className='footer'>
-        <Footer/>
+          <Footer/>
       </div>
     </div>
   )

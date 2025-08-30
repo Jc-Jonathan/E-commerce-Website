@@ -1,4 +1,3 @@
-import React from 'react'
 import "../Footer/Footer.css"
 import dart from "../assets/images/dart.jpg"
 import gmail from "../assets/images/gmail.png"

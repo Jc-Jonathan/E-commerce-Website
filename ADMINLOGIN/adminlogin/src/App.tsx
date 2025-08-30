@@ -22,13 +22,13 @@ function App() {
       setMessage(`Login successful. Welcome ${user.email}`);
       setSuccess(true);
 
-       // Show popup and wait for user to click OK
-        setTimeout(() => {
-           alert('You have successfully logged in!');
-            window.location.href = 'http://localhost:5173/Dashboard'; // Replace with your dashboard app URL
-         }, 500);
-
-
+      // Show popup and wait for user to click OK
+      // Show popup and wait for user to click OK
+setTimeout(() => {
+    alert('You have successfully logged in!');
+        window.location.href = 'https://admindashboard-admin-dashboard-b8cca.web.app'; // ✅ Correct Firebase hosting link
+     }, 500);
+     
     } catch (error: any) {
       if (error.code === 'auth/user-not-found') {
         setMessage('User not found.');
@@ -69,6 +69,9 @@ function App() {
       </form>
 
       {loading && <div className="loading-spinner"></div>}
+
+      {/* ✅ Added this so TS knows message & success are used */}
+      {message && <p className={success ? "success-message" : "error-message"}>{message}</p>}
     </div>
   );
 }

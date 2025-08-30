@@ -165,13 +165,14 @@
 
 /* Category */
 .productdisplay-right-category {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #333;
 }
 
 .spanedit {
   font-weight: bold;
   margin-right: 5px;
+  font-size: 20px;
 }
 /* Make select box transparent */
 option {
@@ -183,5 +184,64 @@ option {
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
+}
+/* Enable horizontal scroll on small screens */
+@media (max-width: 768px) {
+  .productdisplay {
+    flex-wrap: nowrap;        /* keep side by side */
+    overflow-x: auto;         /* enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on mobile */
+  }
+
+  .productdisplay-left,
+  .productdisplay-right {
+    flex: 0 0 auto;           /* prevent shrinking */
+    min-width: 30%;           /* each section takes most of the screen */
+  }
+  .productdisplay-right button {
+  max-width: 50%;
+}
+.productdisplay-right-description {
+  line-height: 1.4;
+  font-size: 0.8rem;
+}
+.productdisplay-img-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.productdisplay-img-list img {
+  margin-top: 5%;
+}
+.productdisplay-right-size h1 {
+  font-size: 1rem;
+  font-weight: 200;
+
+}
+.editstyle {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.productdisplay-right-star {
+  font-size: 1rem;
+}
+.productdisplay-right-prices {
+  font-size: 1rem;
+}
+.productdisplay-right-price-new {
+  font-size: 1rem;
+}
+.productdisplay-right-price-old {
+ font-size: 1rem;
+}
+.productdisplay-right {
+  gap: 0.5rem;
+  margin-top: 13%;
+}
+.productdisplay-main-img {
+  max-width: 300px;
+  
+}
 }
 

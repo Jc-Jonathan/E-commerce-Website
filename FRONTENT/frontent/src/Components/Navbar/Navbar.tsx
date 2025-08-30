@@ -1,74 +1,116 @@
-import React, { useState } from 'react';
-import '../Styles/Addproduct.css';
-import { db } from '../FirebaseConfig';
-import { collection, addDoc } from 'firebase/firestore';
+import { useState, useContext } from "react";
+import { Link } from "react-router-dom";
+import logo from "../assets/images/image0.jpg";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { FiLogIn } from "react-icons/fi";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+import { IoPersonOutline } from "react-icons/io5";
+import { FiSearch } from "react-icons/fi";   // ✅ added search icon
+import { ShopContext } from "../../Context/ShopContext";
+import "./Navbar.css";
 
-const AddProduct = () => {
-  const [product, setProduct] = useState({
-    name: '',
-    image: '',
-    category: '',
-    newPrice: '',
-    oldPrice: '',
-    size: '',
-    tag: '',
-  });
+const Navbar = () => {
+  const [menu, setMenu] = useState("shop");
+  const [isOpen, setIsOpen] = useState(false);
+  const [clickedOpen, setClickedOpen] = useState(false);
+  const shopCtx = useContext(ShopContext);
 
-  const handleChange = (e: any) => {
-    setProduct({ ...product, [e.target.name]: e.target.value });
-  };
+  const notificationCount = shopCtx?.notifications.length || 0;
+  const cartCount =
+    shopCtx?.cartItems.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
-  const handleSubmit = async (e: any) => {
-    e.preventDefault();
-    try {
-      await addDoc(collection(db, "products"), product);
-      alert('Product added successfully!');
-      setProduct({
-        name: '',
-        image: '',
-        category: '',
-        newPrice: '',
-        oldPrice: '',
-        size: '',
-        tag: '',
-      });
-    } catch (error) {
-      console.error(error);
-      alert('Error adding product.');
-    }
+  const handleMenuClick = (item: string) => {
+    setMenu(item);
+    setIsOpen(false);
+    setClickedOpen(false);
   };
 
   return (
-    <div className="add-product-container">
-      <h2>Add Product</h2>
-      <form onSubmit={handleSubmit} className="add-product-form">
-        <input type="text" name="name" placeholder="Product Name" value={product.name} onChange={handleChange} required />
-        <input type="text" name="image" placeholder="Image URL" value={product.image} onChange={handleChange} required />
-        <input type="text" name="category" placeholder="Category" value={product.category} onChange={handleChange} required />
-        <input type="number" name="newPrice" placeholder="New Price" value={product.newPrice} onChange={handleChange} required />
-        <input type="number" name="oldPrice" placeholder="Old Price" value={product.oldPrice} onChange={handleChange} required />
-        <input type="text" name="size" placeholder="Size" value={product.size} onChange={handleChange} required />
+    <nav className="navbar">
+      {/* Logo */}
+      <div className="nav-logo">
+        <img className="logo" src={logo} alt="logo not available" />
+        <p className="para1">URBAN SNEAKER ROYALTY</p>
+      </div>
 
-        {/* ✅ Radio buttons for tag */}
-        <div className="radio-group">
-          <label>
-            <input type="radio" name="tag" value="popular" checked={product.tag === 'popular'} onChange={handleChange} />
-            Popular
-          </label>
-          <label>
-            <input type="radio" name="tag" value="newcollection" checked={product.tag === 'newcollection'} onChange={handleChange} />
-            New Collection
-          </label>
-          <label>
-            <input type="radio" name="tag" value="" checked={product.tag === ''} onChange={handleChange} />
-            Related Product
-          </label>
+      {/* Hamburger Menu for Mobile */}
+      <div
+        className="hamburger-wrapper"
+        onMouseEnter={() => {
+          if (!clickedOpen) setIsOpen(true);
+        }}
+        onMouseLeave={() => {
+          if (!clickedOpen) setIsOpen(false);
+        }}
+        onClick={() => {
+          setClickedOpen(!clickedOpen);
+          setIsOpen(!clickedOpen ? true : false);
+        }}
+      >
+        <div className="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
 
-        <button type="submit">Add Product</button>
-      </form>
-    </div>
+        <ul className={`nav-menu ${isOpen ? "active" : ""}`}>
+          <li onClick={() => handleMenuClick("shop")}>
+            <Link className="editli" to="/Shop">
+              Shop
+            </Link>
+            {menu === "shop" && <hr />}
+          </li>
+          <li onClick={() => handleMenuClick("mens")}>
+            <Link className="editli" to="/mens">
+              Men
+            </Link>
+            {menu === "mens" && <hr />}
+          </li>
+          <li onClick={() => handleMenuClick("womens")}>
+            <Link className="editli" to="/womens">
+              Women
+            </Link>
+            {menu === "womens" && <hr />}
+          </li>
+        </ul>
+      </div>
+
+      {/* Action Buttons */}
+      <div className="nav-login-cart">
+        <Link to="/SearchScreen">
+          <button className="search">
+            <FiSearch />
+          </button>
+        </Link>
+        <Link to="/NotificationScreen">
+          <button className="notification">
+            <IoMdNotificationsOutline  />
+            {notificationCount > 0 && (
+              <span className="notification-badge">{notificationCount}</span>
+            )}
+          </button>
+        </Link>
+        <Link to="/ProfileScreen">
+          <button className="profile">
+            <IoPersonOutline/>
+          </button>
+        </Link>
+        <Link to="/SignInScreen">
+          <button className="login">
+            <FiLogIn  />
+          </button>
+        </Link>
+        <Link to="/CartScreen">
+          <button className="cart">
+            <HiOutlineShoppingBag/>
+            {cartCount > 0 && (
+              <span className="cart-badge">{cartCount}</span>
+            )}
+          </button>
+        </Link>
+      </div>
+    </nav>
   );
 };
 
-export default AddProduct;
+export default Navbar;

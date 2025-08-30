@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "frontent",
+      "public": "FRONTENT/frontent/dist",
+      "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    },
+    {
+      "target": "admindashboard",
+      "public": "ADMINDASHBOARD/admindashboard/dist",
+      "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    },
+    {
+      "target": "adminlogin",
+      "public": "ADMINLOGIN/adminlogin/dist",
+      "rewrites": [{ "source": "**", "destination": "/index.html" }]
+    }
+  ]
+}

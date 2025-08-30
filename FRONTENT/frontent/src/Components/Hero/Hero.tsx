@@ -1,4 +1,3 @@
-import React from 'react'
 import "./hero.css"
 import handicon from "../assets/images/image1.png"
 import { MdWavingHand } from "react-icons/md";

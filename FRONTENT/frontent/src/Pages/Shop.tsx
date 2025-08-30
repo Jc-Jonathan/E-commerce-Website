@@ -1,7 +1,4 @@
-import React from 'react';
 import '../Components/PagesStyles/Shope.css';
-
-
 interface ShopProps {
   PopularComponent: React.ComponentType;
   CollectionComponent: React.ComponentType;

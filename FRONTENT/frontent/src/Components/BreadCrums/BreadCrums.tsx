@@ -1,4 +1,3 @@
-import React from 'react'
 import "../BreadCrums/BreadCrums.css"
 import { IoIosArrowForward } from "react-icons/io";
 const BreadCrums = (props:any) => {

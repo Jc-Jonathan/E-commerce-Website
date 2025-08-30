@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import  { useContext, useState } from 'react';
 import '../ProductDisplay/ProductDisplay.css';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { ShopContext } from '../../Context/ShopContext';
@@ -81,7 +81,7 @@ const ProductDisplay = (props: any) => {
         <button onClick={handleAddToCart}>ADD TO CART</button>
 
         <p className='productdisplay-right-category'>
-          <span className='spanedit'>Category:</span>{Products.category} Shoe
+         Category: <span className='spanedit'>{Products.category} </span>shoe
         </p>
       </div>
     </div>

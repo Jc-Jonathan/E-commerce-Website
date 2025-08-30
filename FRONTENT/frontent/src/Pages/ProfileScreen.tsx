@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { auth, db } from "../FirebaseConfig";
 import { doc, getDoc, updateDoc } from "firebase/firestore";
 import "../Components/PagesStyles/ProfileScreen.css";

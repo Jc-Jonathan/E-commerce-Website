@@ -1,5 +1,3 @@
-// Popular.tsx
-import React from 'react';
 import "../Popular/Popular.css";
 import Item from '../Item/Item';
 

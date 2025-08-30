@@ -121,8 +121,10 @@
 }
 
 .nav-login-cart .notification,
-.nav-login-cart .cart {
+.nav-login-cart .cart,.nav-login-cart .login,.nav-login-cart .profile,.nav-login-cart .search {
   position: relative;
+  font-size: 20px;
+   
 }
 
 .notification-badge,
@@ -143,9 +145,28 @@
 .iconnot {
   font-size: 1.2rem;
 }
+.nav-login-cart .search {
+  background: #f8f9fa;
+  color: #333;
+  border: none;
+}
+
+.nav-login-cart .search:hover {
+  background: #007bff;
+  color: #fff;
+  
+}
+
 
 /* Responsive */
 @media (max-width: 992px) {
+   .navbar{
+    padding: 0.5rem;
+  }
+   .nav-logo .para1{
+    display: inline-block;
+    font-size: 15px;
+   }
   .nav-menu {
     display: none;
     flex-direction: column;
@@ -181,21 +202,54 @@
     font-size: 0.85rem;
     padding: 5px 10px;
   }
+  
 }
 
 @media (max-width: 576px) {
-  .para1 {
+  .nav-login-cart .notification,
+.nav-login-cart .cart,.nav-login-cart .login,.nav-login-cart .profile,.nav-login-cart .search {
+  font-size: 25px;
+   gap: 10rem;
+   margin-left: 15px;
+}
+
+   .nav-logo .para1{
+    display:none;
+   }
+  .navbar{
+    padding: 0.5rem;
+  }
+   .para1 {
     display: none;
   }
 
-  .nav-login-cart button {
-    padding: 5px 8px;
-    font-size: 0.8rem;
+  .nav-logo .logo {
+    display: none;
   }
 
-  .nav-logo .logo {
-    height: 40px;
-    width: 40px;
+  /* ✅ Push hamburger fully to the left */
+  .hamburger {
+    margin-left: 1;
+  }
+
+  /* ✅ Let the login/cart buttons take all remaining space */
+  .nav-login-cart {
+    flex: 1;                /* Take up remaining width */
+    gap: 0.3rem;
+    flex-wrap: nowrap;      /* Keep everything on one line */
+  }
+
+  .nav-login-cart button {
+    padding: 4px 6px;
+    font-size: 0.75rem;
+  }
+
+  .nav-login-cart .notification,
+  .nav-login-cart .profile,
+  .nav-login-cart .login,
+  .nav-login-cart .cart {
+    flex: 0 1 auto;   /* Prevent uneven stretching */
+    min-width: auto;  /* No forced min width */
   }
 }
 
@@ -226,4 +280,7 @@
 .nav-menu a {
   text-decoration: none !important;
   color: inherit;
+}
+.hamburger:hover .nav-menu {
+  display: flex !important;  /* show menu when hovering */
 }

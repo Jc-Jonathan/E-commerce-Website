@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import  { useContext } from "react";
 import { ShopContext } from "../../Context/ShopContext"; // adjust path if needed
 import Popular from "../Popular/Popular";
 

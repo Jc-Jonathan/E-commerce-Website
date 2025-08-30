@@ -1,4 +1,4 @@
-.newcollectioncontainer{
+.relatedproductcontainer{
      width: 93%;
     display: flex;
     flex-direction: column;
@@ -8,12 +8,13 @@
     margin-bottom: 10%;
     overflow:visible;
 }
-h3{
- font-size: 35px;
- font-weight: bolder;
- text-align: center;
+.relatedproductcontainer h2{
+  margin-top: 15px;
+  align-self: center;
+  font-weight: bold;
+ color: black;
 }
-.newcollection-item {
+.relatedproduct  {
    display: grid;
   grid-template-columns: repeat(4, 1fr); /* default desktop 4 items */
   gap: 15px;
@@ -23,12 +24,11 @@ h3{
   scrollbar-width: none; /* ✅ hide scrollbar (Firefox) */
   -ms-overflow-style: none; /* ✅ hide scrollbar (IE/Edge) */
 }
-.newcollection-item::-webkit-scrollbar {
+.relatedproduct ::-webkit-scrollbar {
   display: none; 
 }
-
 @media (max-width: 576px) {
-  .newcollection-item {
+  .relatedproduct {
     grid-template-columns: repeat(3, 1fr); /* ✅ 3 items per row */
     gap: 3px;
     width: 100%;

@@ -83,4 +83,14 @@
 .order-all-btn:hover {
   background: #0056b3;
 }
+/* ✅ Make cart table scrollable on small screens */
+@media (max-width: 768px) {
+  .cart-table {
+    display:inline-block;
+    overflow-x: auto;
+    margin: 0;
+    white-space: nowrap;
+  }
+
+}
 

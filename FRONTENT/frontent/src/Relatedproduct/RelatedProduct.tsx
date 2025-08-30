@@ -1,10 +1,10 @@
-import React from 'react'
 import Item from '../Components/Item/Item'
+import "../Relatedproduct/RelatedProduct.css"
 const RelatedProduct = ({ data_product }: { data_product: any[] }) => {
   return (
-    <div className='newcollectioncontainer'>
-        <h3>RELATED PRODUCT</h3>
-      <div className="newcollection-item">
+    <div className='relatedproductcontainer'>
+        <h2>RELATED PRODUCT</h2>
+      <div className="relatedproduct">
         {data_product.map((item: any, i: number) => (
           <Item
             key={i}

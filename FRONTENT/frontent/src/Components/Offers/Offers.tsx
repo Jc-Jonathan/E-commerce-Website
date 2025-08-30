@@ -1,4 +1,3 @@
-import React from 'react'
 import "../Offers/Offers.css"
 import exclusive_image from "../assets/images/image2.png"
 

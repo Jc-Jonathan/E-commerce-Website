@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import '../Styles/Addproduct.css';
 import { db } from '../FirebaseConfig';
 import { collection, addDoc } from 'firebase/firestore';

@@ -24,15 +24,6 @@
   text-transform: uppercase;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 20px;
-  align-items: center;
-  padding: 15px;
-  color: black;
-}
-
 .product-card {
   background: #fff;
   border-radius: 8px;
@@ -46,3 +37,19 @@
   color: #888;
   font-style: italic;
 }
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* default desktop 4 items */
+  gap: 15px;
+
+}
+
+@media (max-width: 576px) {
+ .products-grid {
+    grid-template-columns: repeat(3, 1fr); /* ✅ 3 items per row */
+    gap: 3px;
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+

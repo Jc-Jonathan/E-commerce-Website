@@ -1,0 +1,24 @@
+{
+  "projects": {
+    "default": "admin-dashboard-b8cca"
+  },
+  "targets": {
+    "admin-dashboard-b8cca": {
+      "hosting": {
+        "frontent": [
+          "admin-dashboard-b8cca"
+        ],
+        "admindashboard": [
+          "admindashboard-admin-dashboard-b8cca"
+        ],
+        "frontend": [
+          "frontent-admin-dashboard-b8cca"
+        ],
+        "adminlogin": [
+          "adminlogin-urben-strides-adminlogin"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
