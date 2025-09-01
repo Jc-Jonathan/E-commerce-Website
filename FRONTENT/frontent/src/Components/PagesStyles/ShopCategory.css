@@ -41,10 +41,16 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* default desktop 4 items */
   gap: 15px;
-
+  width: 100%;
+  position: relative;
 }
 
 @media (max-width: 576px) {
+.shop-category {
+ width: 100%;
+ padding-left: 5%;
+ padding-right: 5%;
+ }
  .products-grid {
     grid-template-columns: repeat(3, 1fr); /* ✅ 3 items per row */
     gap: 3px;

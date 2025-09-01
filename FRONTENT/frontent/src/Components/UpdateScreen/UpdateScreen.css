@@ -80,6 +80,9 @@
 
 /* ✅ Small screen styles */
 @media (max-width: 576px) {
+  .update-container {
+  margin-right: 0%;
+}
   .update-title {
     font-size: 20px;
   }
