@@ -24,7 +24,6 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
-  padding: 10px;
 }
 .search-results {
   display: grid;
@@ -33,13 +32,16 @@
 }
 
 @media (max-width: 576px) {
-  .search-container {
- width: 100%;
+.search-container {
+    width: 100%;
+     padding: 0%;
 }
   .search-results {
     grid-template-columns: repeat(3, 1fr); /* ✅ 3 items per row */
     gap: 3px;
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     overflow-x: auto;
   }
 }

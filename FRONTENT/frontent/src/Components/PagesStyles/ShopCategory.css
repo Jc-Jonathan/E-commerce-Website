@@ -48,13 +48,14 @@
 @media (max-width: 576px) {
 .shop-category {
  width: 100%;
- padding-left: 5%;
- padding-right: 5%;
+ padding: 0%;
  }
  .products-grid {
     grid-template-columns: repeat(3, 1fr); /* ✅ 3 items per row */
     gap: 3px;
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     overflow-x: auto;
   }
 }

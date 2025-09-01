@@ -20,6 +20,7 @@ import ProfileScreen from './Pages/ProfileScreen';
 import { collection, getDocs } from "firebase/firestore";
 import SearchScreen from './Pages/SearchScreen';
 import UpdateScreen from './Components/UpdateScreen/UpdateScreen';
+import ExclusiveOffer from "./Components/ExclusiveOffer/ExclusiveOffer"
 function App() {
   const [categories, setCategories] = useState<any[]>([]);
 
@@ -94,6 +95,7 @@ function App() {
         <Route path='/forgetpassword' element={<ForgetPassword/>}/>
         <Route path='/ProfileScreen' element={<ProfileScreen/>}/>
         <Route path='/SignUpScreen' element={<SignUpScreen/>}/>
+        <Route path='/ExclusiveOffer' element={<ExclusiveOffer/>}/>
         <Route path='/SearchScreen' element={<SearchScreen/>}/>
         <Route path='/Product' element={<Product/>}>
           <Route path=':productId' element={<Product/>}/>

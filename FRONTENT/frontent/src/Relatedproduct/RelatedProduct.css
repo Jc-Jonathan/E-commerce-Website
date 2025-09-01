@@ -1,5 +1,5 @@
 .relatedproductcontainer{
-     width: 93%;
+     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,10 +15,9 @@
  color: black;
 }
 .relatedproduct  {
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(4, 1fr); /* default desktop 4 items */
   gap: 15px;
-  padding-left: 10%;
   overflow-x: auto;   /* ✅ allow horizontal scroll */
   overflow-y: auto; /* ❌ prevent vertical scroll inside */
   scrollbar-width: none; /* ✅ hide scrollbar (Firefox) */
@@ -32,6 +31,8 @@
     grid-template-columns: repeat(3, 1fr); /* ✅ 3 items per row */
     gap: 3px;
     width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
     overflow-x: auto;
   }
 }
