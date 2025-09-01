@@ -1,7 +1,7 @@
-import  { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { Country, State, City } from "country-state-city";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { doc, setDoc } from "firebase/firestore";
+import { collection, getDocs, setDoc, doc } from "firebase/firestore";
 import { auth, db } from "../FirebaseConfig";
 import { useNavigate } from "react-router-dom";
 import "..//Components/PagesStyles/SignUpScreen.css";
@@ -66,14 +66,16 @@ const SignUpScreen = () => {
 
     try {
       // Firebase Auth Signup
-      const userCredential = await createUserWithEmailAndPassword(
-        auth,
-        formData.email,
-        formData.password
-      );
+      await createUserWithEmailAndPassword(auth, formData.email, formData.password);
 
-      // Save user details in Firestore
-      await setDoc(doc(db, "users", userCredential.user.uid), {
+      // Get the current users to calculate numeric ID
+      const usersCollection = collection(db, "users");
+      const snapshot = await getDocs(usersCollection);
+      const nextId = snapshot.size + 1; // next integer ID
+
+      // Save user details in Firestore with integer ID
+      await setDoc(doc(db, "users", nextId.toString()), {
+        id: nextId,
         name: formData.name,
         surname: formData.surname,
         email: formData.email,
@@ -156,7 +158,7 @@ const SignUpScreen = () => {
         {/* Phone Code */}
         <div className="form-group">
           <label>Phone Code</label>
-          <input type="text" value={formData.phoneCode}  />
+          <input type="text" value={formData.phoneCode} readOnly />
         </div>
 
         {/* Address */}

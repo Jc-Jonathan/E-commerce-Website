@@ -19,6 +19,7 @@ import { db } from "./FirebaseConfig";
 import ProfileScreen from './Pages/ProfileScreen';
 import { collection, getDocs } from "firebase/firestore";
 import SearchScreen from './Pages/SearchScreen';
+import UpdateScreen from './Components/UpdateScreen/UpdateScreen';
 function App() {
   const [categories, setCategories] = useState<any[]>([]);
 
@@ -98,6 +99,9 @@ function App() {
           <Route path=':productId' element={<Product/>}/>
         </Route> 
       </Routes>
+      <div className='footer'>
+          <UpdateScreen/>
+      </div>
       <div className='footer'>
           <Footer/>
       </div>

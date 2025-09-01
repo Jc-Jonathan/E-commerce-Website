@@ -1,0 +1,95 @@
+.update-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #fde1ff, #e1ffea22 90%);
+  font-family: sans-serif;
+  margin-right: 6%;
+}
+
+.update-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.update-text {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 20px;
+  padding: 0 15px;
+}
+
+.update-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 90%;
+  max-width: 400px;
+}
+
+.update-input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 14px;
+  background: transparent;   /* ✅ transparent background */
+  color: black;              /* ✅ black text */
+}
+
+.update-input::placeholder {
+  color: #555; /* ✅ dark grey placeholder */
+}
+
+.update-btn {
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.update-btn:hover {
+  background: #e63e5c;
+}
+.update-message {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.update-message.success {
+  color: green;
+  font-weight: bold;
+}
+
+.update-message.error {
+  color: red;
+  font-weight: bold;
+}
+
+
+/* ✅ Small screen styles */
+@media (max-width: 576px) {
+  .update-title {
+    font-size: 20px;
+  }
+
+  .update-text {
+    font-size: 14px;
+  }
+
+  .update-input, .update-btn {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
